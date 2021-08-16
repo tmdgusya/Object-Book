@@ -6,4 +6,7 @@ public class Theater {
         this.ticketSeller = ticketSeller;
     }
 
+    public void enter(Audience audience) {
+        ticketSeller.sellTo(audience);
+    }
 }
