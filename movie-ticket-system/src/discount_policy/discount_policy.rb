@@ -14,6 +14,7 @@ class DiscountPolicy
     return Money::UNIT::ZERO
   end
 
+  #interface
   def get_discount_amount(screening)
     raise RuntimeError("Plz implement that")
   end
