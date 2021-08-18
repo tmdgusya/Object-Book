@@ -5,9 +5,9 @@ class DiscountPolicy
   end
 
   public def calculate_discount_amount(screening)
-    screening.each do |discount_policy|
+    @conditions.each do |discount_policy|
       if discount_policy.is_satisfied?(screening)
-        get_discount_amount(screening)
+        return get_discount_amount(screening)
       end
     end
 

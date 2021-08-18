@@ -1,3 +1,5 @@
+require_relative 'discount_policy'
+
 class AmountDiscountPolicy < DiscountPolicy
 
   def initialize(conditions, discount_amount)
@@ -6,7 +8,7 @@ class AmountDiscountPolicy < DiscountPolicy
   end
 
   def get_discount_amount(screening)
-    @discount_amount4
+    @discount_amount
   end
 
 end

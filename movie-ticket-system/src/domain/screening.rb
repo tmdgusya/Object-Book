@@ -1,9 +1,11 @@
 class Screening
+  attr_reader :movie, :sequence, :when_screened, :start_time
 
-  def initialize(movie, sequence, when_screened)
+  def initialize(movie, sequence, when_screened, start_time)
     @movie = movie
     @sequence = sequence
     @when_screened = when_screened
+    @start_time = start_time
   end
 
   public def reserve(customer, audience_count)
@@ -19,7 +21,7 @@ class Screening
   end
 
   public def get_movie_fee
-    @movie.get_fee
+    @movie.fee
   end
 
   #input type int
