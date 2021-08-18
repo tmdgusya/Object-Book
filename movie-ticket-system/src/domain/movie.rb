@@ -9,6 +9,9 @@ class Movie
   end
 
   public def calculate_money_fee(screening)
+    if @discount_policy.nil?
+      return @fee
+    end
     fee.minus(@discount_policy.calculate_discount_amount(screening))
   end
 
